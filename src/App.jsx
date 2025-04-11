@@ -26,7 +26,7 @@ export const App = () => {
 
   return (
     <>
-      <PaginationBar noOfPage={noOfPage} setCurrentPage={setCurrentPage} />
+      <PaginationBar noOfPage={noOfPage} pageSize={PAGE_SIZE} totalProducts={totalProducts} setCurrentPage={setCurrentPage} currentPage={currentPage} start={start} end={end} />
       <div className="flex flex-wrap gap-2 p-5">
         {products.slice(start, end).map((product) => (
           <ProductCard
